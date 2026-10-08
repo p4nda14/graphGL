@@ -12,8 +12,7 @@ void visualize(float (*zValues), float domain[2], float range[2], float zrange[2
   Where:
   
   -float (*zValues) : A function that returns the mathematical function's dependent variable.
-  
-          (The program will try to pass a std::array<float, 2> variable to this function corresponding to the x and y positions in the mesh.)
+  (The program will try to pass a std::array<float, 2> variable to this function corresponding to the x and y positions in the mesh.)
           
   -float domain[2]  : X values you want to show. expects: {minXValue, maxXValue}
   
