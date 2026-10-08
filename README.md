@@ -2,7 +2,7 @@
 I was (and am still) teaching myself OpenGL and can only learn by doing, so I came up with this and so far I'm pretty proud of it. As a reminder this is my own 
 little side project birthed from my trying to learn openGL, so nothing is probably very well optimized. Anyway thanks for trying it.
 
--------------USAGE---------------
+# Usage
 Currently supporting 3 functions (don't worry more to come);
 
 void visualize(float (*zValues), float domain[2], float range[2], float zrange[2], float precision, bool anim);
