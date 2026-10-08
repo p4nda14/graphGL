@@ -8,21 +8,18 @@ Currently supporting 3 functions (don't worry more to come);
 
 
 void visualize(float (*zValues), float domain[2], float range[2], float zrange[2], float precision, bool anim);
-
-  Where:
   
-  -float (*zValues) : A function that returns the mathematical function's dependent variable.
-  (The program will try to pass a std::array<float, 2> variable to this function corresponding to the x and y positions in the mesh.)
+  |float (*zValues) | A function that returns the mathematical function's dependent variable.(The program will try to pass a std::array<float, 2> variable to this function corresponding to the x and y positions in the mesh.)|
           
-  -float domain[2]  : X values you want to show. expects: {minXValue, maxXValue}
+  |float domain[2]  | X values you want to show. expects: {minXValue, maxXValue}|
   
-  -float range[2]   : Y values you want to show. expects: {minYValue, maxYValue}
+  |float range[2]   | Y values you want to show. expects: {minYValue, maxYValue}|
   
-  -float zrange[2]  : Z values you want to show. expects: {minZValue, maxZValue}
+  |float zrange[2]  | Z values you want to show. expects: {minZValue, maxZValue}|
   
-  -float precision  : The number of individual points to calculate. Should be a value that can be turned into an int.
+  |float precision  | The number of individual points to calculate. Should be a value that can be turned into an int.|
   
-  -bool anim        : Whether the function changes over time. (not implemented yet)
+  |bool anim        | Whether the function changes over time. (not implemented yet)|
   
 
 void setMeshColor(float color[4]);
