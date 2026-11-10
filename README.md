@@ -4,6 +4,8 @@ A small OpenGL tool for visualizing mathematical functions as 3D meshes.
 
 I was (and am still) teaching myself OpenGL and can only learn by doing, so I came up with this, and so far it's working pretty well. As a reminder, this is my own little side project born from trying to learn OpenGL, so nothing is probably very well optimized. Anyway, thanks for trying it!
 
+
+
 ## Usage
 
 graphGL currently supports 3 functions (don't worry, more to come).
@@ -42,6 +44,8 @@ void setBgColor(float color[4]);
 | Parameter | Description |
 |-----------|-------------|
 | `float color[4]` | The RGBA values you want the background to be. Expects `{r, g, b, a}`. |
+
+
 
 ## Installation
 
