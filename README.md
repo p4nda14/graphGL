@@ -2,7 +2,7 @@
 
 A small OpenGL tool for visualizing mathematical functions as 3D meshes.
 
-I was (and am still) teaching myself OpenGL and can only learn by doing, so I came up with this, and so far I'm pretty proud of it. As a reminder, this is my own little side project born from trying to learn OpenGL, so nothing is probably very well optimized. Anyway, thanks for trying it!
+I was (and am still) teaching myself OpenGL and can only learn by doing, so I came up with this, and so far it's working pretty well. As a reminder, this is my own little side project born from trying to learn OpenGL, so nothing is probably very well optimized. Anyway, thanks for trying it!
 
 ## Usage
 
@@ -42,6 +42,9 @@ void setBgColor(float color[4]);
 | Parameter | Description |
 |-----------|-------------|
 | `float color[4]` | The RGBA values you want the background to be. Expects `{r, g, b, a}`. |
+
+## Installation
+
   
 
 ## Example
@@ -60,4 +63,33 @@ return 3 * sin(0.25 * sqrt(pow(pos[0],2)+pow(pos[1],2)) - time);
 In this case we are using a 3d wave propagation function, the mathematical function for which looks like this:
 ```math
 z = \sin(A \sqrt{x^2 + y^2} - t)
+```
+
+Then call the visualize function and put the name of your function as the first input, then the domain and range of the function, and the mesh type and whether you want it to change over time.
+```cpp
+ visualize(wave, {-20,20}, {-20,20}, 150.0f, GRAPHGL_MESHTYPE_SOLID, true);
+```
+
+And there you have it, here's the full sample code
+```cpp
+#include <graphGL/graphGL.hpp>
+#include <array>
+#include <cmath>
+
+double G = 6.6743*(pow(10,(-11)));
+double mass = 1.988416*(pow (10,30));
+double massPosition[] = {0 ,0};
+const double AU = 1.496e11;
+
+float wave(std::array<float,2> pos, float time){
+    return 3 * sin(0.25 * sqrt(pow(pos[0],2)+pow(pos[1],2)) - time);
+}
+
+int main(){
+    //setBgColor(258.0f, 0.0f, 0.0f, 100.0f);
+    setMeshColor(0.0f, 256.0f, 0.0f, 100.0f);
+    visualize(wave, {-20,20}, {-20,20}, 150.0f, GRAPHGL_MESHTYPE_SOLID, true);
+    return 0;
+}
+
 ```
