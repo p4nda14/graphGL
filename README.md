@@ -59,5 +59,5 @@ return 3 * sin(0.25 * sqrt(pow(pos[0],2)+pow(pos[1],2)) - time);
 ```
 In this case we are using a 3d wave propagation function, the mathematical function for which looks like this:
 ```math
-z = \sin\left(A \sqrt{x^2 + y^2} - t)
+z = \sin(A \sqrt{x^2 + y^2} - t)
 ```
